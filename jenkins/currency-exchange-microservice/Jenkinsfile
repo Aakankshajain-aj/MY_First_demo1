@@ -9,7 +9,7 @@ pipeline{
      stage('Checkout'){
 	    steps{
 		   bat "mvn --version"
-		   bat "docker version"
+		 //  bat "docker version"
 		}
 	 }
 	 stage('Compile'){
