@@ -6,6 +6,12 @@ pipeline{
 	//  PATH = "$dockerHome/bin:$mavenHome/bin:$PATH"
   // }
    stages{
+      stage('Build') {
+            steps {
+                // Get some code from a GitHub repository
+                git 'https://github.com/Aakankshajain-aj/jenkins-pipeline.git'
+	    }		    
+      }
      stage('Checkout'){
 	    steps{
 		   bat "mvn --version"
